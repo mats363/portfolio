@@ -1,0 +1,163 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Mats Jönsson | FED portfolio 2021 </title>
+  <meta name="description" content="Portfolio JavaScript Creative Coder">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Mats Jönsson | Front End Developer ">
+  <meta property="og:type" content="Website Portfolio">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="scss/normalize.css">
+  <link rel="stylesheet" href="scss/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <main>  
+    <div class="page-container work">  
+      <header class="top-page">
+        <button class="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav>
+          <h1>MJ||2021</h1>
+          <div class="menu-box">
+            <ul>
+              <li><a href="#work">Work</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+            <span class="line"></span>
+            <ul class="links">
+              <li><a href="#" class="fa fa-linkedin"></a></li>
+              <li><a href="#" class="fa fa-facebook"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="#" class="fa fa-youtube"></a></li>
+              <li><a href="#" class="fa fa-instagram"></a></li>
+            </ul>
+          </div>         
+        </nav>
+      </header>
+      <section class="slideshow-container">
+        <!-- Carousel för bildvisning -->
+        <div class="mySlides fade">
+          
+          <img src="img/Project1.jpg" alt="Project 1">
+          <div class="text"><h3>Project 1</h3>Dolores natus or aliquam or dolorem and pariatur. Qui quaerat quaerat eiusmod.</div>
+        </div>
+      
+        <div class="mySlides fade">
+          
+          <img src="img/Project2.jpg" alt="Project 2">
+          <div class="text"><h3>Project 2</h3>Ad nulla so aut but consequat iste. Eius aut cillum velit so eum for ullam. Consequat.</div>
+        </div>
+      
+        <div class="mySlides fade">
+          
+          <img src="img/Project3.jpg" alt="Project 3">
+          <div class="text"><h3>Project 3</h3>Quia et laudantium commodo and quo for tempor. Ad nemo. Explicabo aliquam yet quasi or veritatis and sint, adipisicing.</div>
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        <br>  
+      </section>
+    </div>
+
+    <section class="page-container about" id="about">
+      <article class="info">
+        <header>
+          <h2>About</h2>
+        </header>
+        <p>Aspiring Front End Developer born and raised in Sundsvall. Located in Stockholm.</p>
+      </article>
+      
+      <article class="skills">
+        <h2>Software skills</h2>
+        <ul>
+          <li>HTML/CSS</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Adobe Creative Cloud (Premiere Pro, After Effects, Photoshop)</li>
+          <li>Cinema 4D</li>
+        </ul>
+
+      </article>
+
+      <article class="softSkills">
+        <h2>Soft skills</h2>
+        <ul>
+          <li>Works well in groups</li>
+          <li>Nice</li>
+          <li>Enjoys the great outdoors</li>
+        </ul>
+      </article>
+
+      <article class="clients">
+        <header>
+          <h2>Clients</h2>
+        </header>
+        <ul>
+          <li>Universal Music</li>
+          <li>ACNE studios</li>
+          <li>TECHDATA</li>
+          <li>and more</li>
+        </ul>
+      </article>
+  </section>
+
+  </main>
+  <footer>
+    <!--Kommer lägga till chatbot-funktionen med JavaScript-->
+    <button class="chatbot">
+      <span>Chatbot</span>
+    </button> 
+  </footer>
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+@import '_variables.scss';
+@import '_someicons.scss'; 
+@import '_base.scss'; /* för mobilen */
+@import '_carousel.scss'; /* för bildvisning */
+
+
+
+
+@media screen and (min-width: 480px) {
+    @import '_desktop.scss';
+}

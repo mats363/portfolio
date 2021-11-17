@@ -1,0 +1,81 @@
+.about {
+    padding: 10px;   
+    width: 100vw;
+    max-height: 100vh;  
+    display: grid;
+    grid-template-columns: 0.2fr 1.4fr 0.5fr 1.4fr 0.2fr;
+    grid-template-rows: 0.4fr 1.5fr 0.8fr 1.6fr 0.1fr;
+    gap: 70px 9 9px;
+    grid-auto-flow: row;
+    
+    grid-template-areas:
+      ". . . . ."
+      ". info . skills ."
+      ". clients . softSkills ."
+      ". . . . ."
+      ". . . . .";   
+  }
+  
+  .clients { grid-area: clients; 
+    
+    background: whitesmoke;
+    border-radius: 20px;
+    text-align: center;
+    
+        ul {
+            list-style: none;
+            padding: 0px;
+            line-height: 40px;
+        }
+    }
+  
+  .info { grid-area: info; 
+    background: whitesmoke;
+    border-radius: 20px;
+    text-align:center;
+    line-height: 25px;
+    padding: 10px;    
+
+    }
+
+   .skills {
+       grid-area: skills;
+       background: whitesmoke;
+       border-radius: 20px;
+       text-align: center;
+       padding: 10px;
+
+       ul {
+        list-style: none;
+        padding: 0px;
+        line-height: 25px;
+        
+    }
+   }
+
+   .softSkills {
+       grid-area: softSkills;
+       background: whitesmoke;
+       border-radius: 20px;
+       text-align: center;
+       padding: 10px;
+
+       ul {
+        list-style: none;
+        padding: 0px;
+        line-height: 25px;
+        
+    }
+   }
+
+.top-page .menu {
+    visibility: hidden;
+}
+
+
+
+nav .menu-box {
+    visibility: visible;
+}
+
+  
